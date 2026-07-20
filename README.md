@@ -484,7 +484,7 @@ Research Interests:
 
 * Bacterial genomics
 * Antimicrobial resistance
-*Host-Pathogen Interaction
+* Host-Pathogen Interaction
 * One Health
 * Bioinformatics
 
