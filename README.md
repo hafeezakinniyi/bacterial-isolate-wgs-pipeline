@@ -419,7 +419,7 @@ Successful execution of the pipeline produces:
 - CheckM genome quality metrics
 - MLST sequence types
 - AMRFinderPlus antimicrobial resistance gene annotations
-- ABRicate database screening results
+- ABRicate antimicrobial resistance gene, virulence gene and plasmid annotations
 - Average sequencing depth estimates
 - Pipeline execution logs
 
@@ -484,8 +484,8 @@ Research Interests:
 
 * Bacterial genomics
 * Antimicrobial resistance
+*Host-Pathogen Interaction
 * One Health
-* Comparative genomics
 * Bioinformatics
 
 
