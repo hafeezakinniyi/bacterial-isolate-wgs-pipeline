@@ -1,0 +1,42 @@
+name: amr_project
+
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+
+dependencies:
+  - python=3.11
+
+  # Quality control
+  - fastqc
+  - trimmomatic
+
+  # Taxonomic classification
+  - kraken2
+  - bracken
+
+  # Genome assembly
+  - spades
+
+  # Assembly assessment
+  - quast
+
+  # Genome characterization
+  - amrfinderplus
+  - abricate
+
+  # Read mapping
+  - bowtie2
+  - samtools
+
+  # General utilities
+  - seqkit
+  - pigz
+  - parallel
+
+  # Shell utilities
+  - coreutils
+  - gawk
+  - sed
+  - grep

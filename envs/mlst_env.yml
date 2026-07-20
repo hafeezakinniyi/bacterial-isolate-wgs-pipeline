@@ -1,0 +1,9 @@
+name: mlst_env
+
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+
+dependencies:
+  - mlst
