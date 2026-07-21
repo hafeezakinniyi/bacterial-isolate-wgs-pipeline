@@ -120,7 +120,7 @@ bacterial-isolate-wgs-pipeline/
 │       └── 06_coverage_estimation.sh
 │
 ├── envs/
-│   ├── amr_project.yml
+│   ├── bacwgs_env.yml
 │   ├── checkm_env.yml
 │   └── mlst_env.yml
 │
@@ -170,7 +170,7 @@ cd bacterial-isolate-wgs-pipeline
 ### 2. Create the Conda environments
 
 ```bash
-conda env create -f envs/amr_project.yml
+conda env create -f envs/bacwgs_env.yml
 
 conda env create -f envs/checkm_env.yml
 
@@ -179,18 +179,20 @@ conda env create -f envs/mlst_env.yml
 
 ### 3. Configure reference databases
 
+The following databases should be installed before running the pipeline:
+
+* Kraken2 database
+* Bracken database files
+* AMRFinderPlus database
+* ABRicate databases
+
 Before running the pipeline, edit:
 
 ```text
 config/config.sh
 ```
 
-and update the locations of your local reference databases, including:
-
-- Kraken2 database
-- Bracken database
-- AMRFinderPlus database
-- ABRicate databases
+and update the locations of your local reference databases.
 
 ---
 
@@ -205,19 +207,6 @@ To simplify dependency management, the pipeline uses three Conda environments.
 | `MLST_ENV`   | MLST                                                                                             |
 
 Environment names are configured in `config/config.sh`.
-
----
-
-## Required Reference Databases
-
-The following databases should be installed before running the pipeline:
-
-* Kraken2 database
-* Bracken database files
-* AMRFinderPlus database
-* ABRicate databases
-
-Database paths are specified in `config/config.sh`.
 
 ---
 
@@ -359,8 +348,7 @@ RUN_COVERAGE=true
 **Purpose**
 
 * Multi-locus sequence typing
-* Detect antimicrobial resistance genes
-* Screen genomes against multiple annotation databases
+* Screen genomes against multiple annotation databases to detect AMR genes, virulence factors and plasmid replicons
 
 **Tools**
 
