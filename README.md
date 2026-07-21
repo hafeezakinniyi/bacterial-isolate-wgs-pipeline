@@ -151,9 +151,9 @@ The pipeline has been developed for Linux systems and requires Bash together wit
 | CheckM        | Genome completeness assessment |
 | MLST          | Sequence typing                |
 | AMRFinderPlus | AMR gene identification        |
-| ABRicate      | Genome screening               |
+| ABRicate      | Genome screening for AMR gene, virulence factor and plasmid replicon              |
 | Bowtie2       | Read mapping                   |
-| SAMtools      | Alignment processing           |
+| SAMtools      | Alignment processing and coverage estimation        |
 
 ---
 
@@ -421,7 +421,7 @@ Successful execution of the pipeline produces:
 - CheckM genome quality metrics
 - MLST sequence types
 - AMRFinderPlus antimicrobial resistance gene annotations
-- ABRicate antimicrobial resistance gene, virulence gene and plasmid annotations
+- ABRicate antimicrobial resistance gene, virulence factor and plasmid annotations
 - Average sequencing depth estimates
 - Pipeline execution logs
 
@@ -450,7 +450,6 @@ Planned enhancements include:
 
 * MultiQC report generation
 * Prokka genome annotation
-* Bakta genome annotation
 * Snippy variant calling
 * Snakemake implementation
 * Nextflow implementation
@@ -464,7 +463,7 @@ Planned enhancements include:
 
 If this pipeline contributes to your research, please cite:
 
-> Akinniyi HT. Bacterial Isolate Whole Genome Sequencing Pipeline. GitHub repository.
+> Akinniyi HT. 2026. Bacterial Isolate Whole Genome Sequencing Pipeline. GitHub repository.
 
 A DOI will be assigned through Zenodo upon the first public release.
 
@@ -473,6 +472,23 @@ A DOI will be assigned through Zenodo upon the first public release.
 ## License
 
 This project is released under the MIT License.
+
+---
+
+## References
+
+* Andrew, S. (2010). FastQC: A quality control tool for high throughput sequence data. In Babraham Bioinformatics.
+* Bolger, A. M., Lohse, M., & Usadel, B. (2014). Trimmomatic: A flexible trimmer for Illumina sequence data. Bioinformatics, 30(15), 2114–2120.
+* Danecek, P., Bonfield, J. K., Liddle, J., Marshall, J., Ohan, V., Pollard, M. O., Whitwham, A., Keane, T., McCarthy, S. A., Davies, R. M., & Li, H. (2021). Twelve years of SAMtools and BCFtools. GigaScience, 10(2). https://doi.org/10.1093/gigascience/giab008
+* Feldgarden, M., Brover, V., Gonzalez-Escalona, N., Frye, J. G., Haendiges, J., Haft, D. H., Hoffmann, M., Pettengill, J. B., Prasad, A. B., Tillman, G. E., Tyson, G. H., & Klimke, W. (2021). AMRFinderPlus and the reference gene catalog facilitate examination of the genomic links among antimicrobial resistance, stress response, and virulence. Scientific Reports, 11(1). https://doi.org/10.1038/s41598-021-91456-0
+* Gurevich, A., Saveliev, V., Vyahhi, N., & Tesler, G. (2013). Quast: Quality assessment tool for genome assemblies. Bioinformatics, 29(8), 1072–1075. http://dx.doi.org/10.1093/bioinformatics/btt086
+* Langmead, B., & Salzberg, S. L. (2012). Fast gapped-read alignment with bowtie 2. Nature Methods, 9(4), 357–359. https://doi.org/10.1038/nmeth.1923
+* Lu, J., Breitwieser, F. P., Thielen, P., & Salzberg, S. L. (2017). Bracken: Estimating species abundance in metagenomics data. PeerJ Computer Science, 3, e104. https://doi.org/10.7717/peerj-cs.104
+* Parks, D. H., Imelfort, M., Skennerton, C. T., Hugenholtz, P., & Tyson, G. W. (2015). CheckM: Assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes. Genome Research, 25(7), 1043–1055. https://doi.org/10.1101/gr.186072.114
+* Prjibelski, A., Antipov, D., Meleshko, D., Lapidus, A., & Korobeynikov, A. (2020). Using SPAdes de novo assembler. Current Protocols in Bioinformatics, 70(1). https://doi.org/10.1002/cpbi.102
+* Seemann, T. (2016). Mass screening of contigs for antimicrobial and virulence genes. GitHub. https://github.com/tseemann/abricate
+* Seemann, T. (2018). mlst. GitHub. https://github.com/tseemann/mlst
+* Wood, D. E., Lu, J., & Langmead, B. (2019). Improved metagenomic analysis with kraken 2. Genome Biology, 20(1). https://doi.org/10.1186/s13059-019-1891-0
 
 ---
 
