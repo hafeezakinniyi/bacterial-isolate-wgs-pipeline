@@ -1,3 +1,11 @@
+![Platform](https://img.shields.io/badge/platform-Linux-blue)
+
+![Bash](https://img.shields.io/badge/bash-5%2B-green)
+
+![License](https://img.shields.io/badge/license-MIT-orange)
+
+![Status](https://img.shields.io/badge/status-stable-success)
+
 # Bacterial Isolate Whole Genome Sequencing Pipeline
 
 A modular, reproducible, and fully automated Bash pipeline for bacterial isolate whole-genome sequencing (WGS) analysis from Illumina paired-end reads.
@@ -49,7 +57,7 @@ The pipeline was developed with the following objectives:
 
 ---
 
-## Pipeline Workflow_______REPLACE WITH DIAGRAM
+## Pipeline Workflow
 
 ```text
                     Raw Illumina Reads
