@@ -125,6 +125,7 @@ bacterial-isolate-wgs-pipeline/
 │   └── mlst_env.yml
 │
 ├── docs/
+│   └── checkm_installation.md
 │
 ├── data/
 │
@@ -140,26 +141,26 @@ bacterial-isolate-wgs-pipeline/
 
 The pipeline has been developed for Linux systems and requires Bash together with the following software.
 
-| Software      | Purpose                        |
-| ------------- | ------------------------------ |
-| FastQC        | Read quality assessment        |
-| Trimmomatic   | Adapter trimming               |
-| Kraken2       | Taxonomic classification       |
-| Bracken       | Abundance estimation           |
-| SPAdes        | Genome assembly                |
-| QUAST         | Assembly statistics            |
-| CheckM        | Genome completeness assessment |
-| MLST          | Sequence typing                |
-| AMRFinderPlus | AMR gene identification        |
-| ABRicate      | Genome screening for AMR gene, virulence factor and plasmid replicon              |
-| Bowtie2       | Read mapping                   |
-| SAMtools      | Alignment processing and coverage estimation        |
+| Software      | Purpose                        					|
+| ------------- | ---------------------------------------------------------------------	|
+| FastQC        | Read quality assessment        					|
+| Trimmomatic   | Adapter trimming               					|
+| Kraken2       | Taxonomic classification       					|
+| Bracken       | Abundance estimation           					|
+| SPAdes        | Genome assembly                					|
+| QUAST         | Assembly statistics     						|
+| CheckM        | Genome completeness assessment 					|
+| MLST          | Sequence typing               					|
+| AMRFinderPlus | AMR gene identification        					|
+| ABRicate      | Genome screening for AMR gene, virulence factor and plasmid replicon  |
+| Bowtie2       | Read mapping                   					|
+| SAMtools      | Alignment processing and coverage estimation        			|
 
 ---
 
 ## Installation
 
-### 1. Clone the repository
+### Clone the repository
 
 ```bash
 git clone https://github.com/hafeezakinniyi/bacterial-isolate-wgs-pipeline.git
@@ -167,7 +168,7 @@ git clone https://github.com/hafeezakinniyi/bacterial-isolate-wgs-pipeline.git
 cd bacterial-isolate-wgs-pipeline
 ```
 
-### 2. Create the Conda environments
+### Create the Conda environments
 
 ```bash
 conda env create -f envs/bacwgs_env.yml
@@ -177,22 +178,38 @@ conda env create -f envs/checkm_env.yml
 conda env create -f envs/mlst_env.yml
 ```
 
-### 3. Configure reference databases
+### Reference database setup
 
-The following databases should be installed before running the pipeline:
+Several tools in the pipeline require reference databases before analysis can be performed. The setup procedure differs slightly between tools and is summarized below.
 
-* Kraken2 database
-* Bracken database files
-* AMRFinderPlus database
-* ABRicate databases
+| Tool | Database | Setup |
+|------|----------|-------|
+| **Kraken2** | Standard or custom Kraken2 database | Download or build a Kraken2 database |
+| **Bracken** | Bracken database files | Build from the selected Kraken2 database using `bracken-build`. |
+| **CheckM** | CheckM reference data | Download once and configure using `checkm data setRoot`. |
+| **AMRFinderPlus** | NCBI AMRFinderPlus database | Installed automatically with the Conda package. Optionally update using `amrfinder --update`. |
+| **ABRicate** | Screening databases (e.g. CARD, ResFinder, VFDB, PlasmidFinder) | Install or update using `abricate --setupdb`. |
 
-Before running the pipeline, edit:
+
+After downloading, update the corresponding paths in:
 
 ```text
 config/config.sh
 ```
 
-and update the locations of your local reference databases.
+Example:
+
+```bash
+KRAKEN_DB="/path/to/kraken2_database"
+```
+
+> **Note**
+>
+> Database installation is typically performed once during pipeline setup. After installation, only the Kraken2 database location needs to be specified in `config/config.sh`, while CheckM, AMRFinderPlus, and ABRicate manage their databases internally.
+
+A verified CheckM installation workflow is available in:
+
+- `docs/checkm_installation.md`
 
 ---
 

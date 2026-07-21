@@ -6,4 +6,4 @@ channels:
   - defaults
 
 dependencies:
-  - mlst
+  - mlst=2.23.0
