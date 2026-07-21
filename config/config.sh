@@ -24,7 +24,6 @@ RAW_READS_DIR="data"
 
 # Reference Databases
 KRAKEN_DB="/path/to/kraken2/database"
-# "/home/hafeezakinniyi/amr_project/standard_database_build"
 
 # Genome Assembly
 SPADES_MEMORY=64
@@ -37,8 +36,8 @@ JAVA_INITIAL_MEMORY="512m"
 # Conda Environments
 ###############################################################################
 
-MAIN_ENV="amr_project"
-CHECKM_ENV="checkm"
+MAIN_ENV="bacwgs_env"
+CHECKM_ENV="checkm_env"
 MLST_ENV="mlst_env"
 
 ###############################################################################
