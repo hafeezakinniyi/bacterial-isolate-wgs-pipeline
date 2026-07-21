@@ -1,10 +1,4 @@
-![Platform](https://img.shields.io/badge/platform-Linux-blue)
-
-![Bash](https://img.shields.io/badge/bash-5%2B-green)
-
-![License](https://img.shields.io/badge/license-MIT-orange)
-
-![Status](https://img.shields.io/badge/status-stable-success)
+![Platform](https://img.shields.io/badge/platform-Linux-blue)  ![Bash](https://img.shields.io/badge/bash-5%2B-green)  ![License](https://img.shields.io/badge/license-MIT-orange)  ![Status](https://img.shields.io/badge/status-stable-success)
 
 # Bacterial Isolate Whole Genome Sequencing Pipeline
 
