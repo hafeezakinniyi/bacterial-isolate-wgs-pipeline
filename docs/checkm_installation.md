@@ -36,7 +36,7 @@ pip install checkm-genome
 Verify the installation:
 
 ```bash
-checkm --version
+checkm -h
 ```
 
 ---
