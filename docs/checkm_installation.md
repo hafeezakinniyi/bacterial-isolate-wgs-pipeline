@@ -83,6 +83,13 @@ echo $CHECKM_DATA_PATH
 
 ## 6. Test the Installation
 
+You may need to reactivate the environment:
+
+```bash
+conda activate checkm_env
+```
+then test using:
+
 ```bash
 checkm data setRoot
 ```
