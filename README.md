@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/1306531019.svg)](https://doi.org/10.5281/zenodo.21478928)  ![Platform](https://img.shields.io/badge/platform-Linux-blue)  ![Bash](https://img.shields.io/badge/bash-5%2B-green)  ![License](https://img.shields.io/badge/license-MIT-orange)  ![Status](https://img.shields.io/badge/status-stable-success) 
+![Platform](https://img.shields.io/badge/platform-Linux-blue)  ![Bash](https://img.shields.io/badge/bash-5%2B-green)  ![License](https://img.shields.io/badge/license-MIT-orange)  ![Status](https://img.shields.io/badge/status-stable-success) [![DOI](https://zenodo.org/badge/1306531019.svg)(https://doi.org/10.5281/zenodo.21478928)]
 
 # Bacterial Isolate Whole Genome Sequencing Pipeline
 
