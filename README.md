@@ -468,7 +468,7 @@ Planned enhancements include:
 
 If this pipeline contributes to your research, please cite:
 
-> Akinniyi HT. (2026). Bacterial Isolate Whole Genome Sequencing Pipeline (Version 1.0.1). Zenodo. https://doi.org/10.5281/zenodo.21478928
+> Akinniyi, H.T., Happi, C.T., and Happi, A.N. (2026). Bacterial Isolate Whole Genome Sequencing Pipeline (Version 1.0.1). Zenodo. https://doi.org/10.5281/zenodo.21478928
 
 ---
 
